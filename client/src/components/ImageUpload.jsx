@@ -36,6 +36,7 @@ const ImageUpload = () => {
     const removeImage = () => {
         setFile(null);
         setPreview(null);
+        setResult(null);
     };
 
     return (
@@ -43,7 +44,7 @@ const ImageUpload = () => {
             <Title />
             <form className="flex flex-col items-center justify-center border-4 border-dashed border-gray-500 rounded-lg p-8 text-center space-y-4 bg-gray-100 shadow-lg">
                 <input type="file" onChange={handleFileChange} className="py-2 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent" />
-                <em className="text-sm text-gray-500">(Only *.jpeg and *.png images will be accepted)</em>
+                <em className="text-sm text-gray-500">(Only *.jpeg and *.jpg images will be accepted)</em>
             </form>
             <div className="flex justify-center items-center space-x-4 mt-8">
                 {preview && (

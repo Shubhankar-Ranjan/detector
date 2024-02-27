@@ -33,31 +33,6 @@ const ImageUpload = () => {
         setResult(response.data);
     };
 
-    // const handleSubmit = async (event) => {
-    //     event.preventDefault();
-
-    //     const formData = new FormData();
-    //     formData.append('file', file);
-
-    //     const response = await axios.post('http://127.0.0.1:8000/predict', formData, {
-    //         headers: {
-    //             'Content-Type': 'multipart/form-data'
-    //         }
-    //     });
-
-    //     let data = response.data;
-    //     if (data.Confidence < 95) {
-    //         data.Confidence = (Math.random() * (100 - 95) + 95).toFixed(2);
-    //     }
-
-    //     setResult(response.data);
-
-    //     // Reset the form and clear the file and preview states
-    //     event.target.reset();
-    //     setFile(null);
-    //     setPreview(null);
-    // };
-
     const removeImage = () => {
         setFile(null);
         setPreview(null);

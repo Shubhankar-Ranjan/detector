@@ -66,7 +66,7 @@ const ImageUpload = () => {
     return (
         <div className="flex flex-col h-screen bg-gray-200 p-8 space-y-8 overflow-hidden">
             <Title />
-            <form className={`flex flex-col items-center justify-center border-4 ${dragging ? 'border-blue-500' : 'border-dashed border-gray-500'} rounded-lg p-8 text-center space-y-4 bg-gray-100 shadow-lg`}
+            <form className={`w-1/2 h-auto mx-auto flex flex-col items-center justify-center border-4 ${dragging ? 'border-blue-500' : 'border-dashed border-gray-500'} rounded-lg p-8 text-center space-y-4 bg-gray-100 shadow-lg`}
                 onDragOver={handleDragOver}
                 onDragLeave={handleDragLeave}
                 onDrop={handleDrop}
@@ -80,7 +80,7 @@ const ImageUpload = () => {
                         </label>
                     </>
                 )}
-                <div className="flex justify-center items-center space-x-4 mt-8">
+                <div className="flex flex-col justify-center items-center space-y-4 mt-8">
                     {preview && (
                         <div className="relative">
                             <img src={preview} alt="Preview" className="h-64" />
@@ -91,7 +91,7 @@ const ImageUpload = () => {
                     )}
                     {result && (
                         <div className="p-4 bg-white rounded shadow-lg text-center">
-                            <p className="text-xl font-bold text-gray-700">Class: {result.Class}</p>
+                            <p className="text-xl font-bold text-gray-700">Disease: {result.Class}</p>
                             <p className="text-xl font-bold text-gray-700">Confidence: {result.Confidence}</p>
                         </div>
                     )}
